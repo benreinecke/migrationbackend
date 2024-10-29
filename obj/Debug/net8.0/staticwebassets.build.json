@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "qC7gKV4avLA8vskQYYqZkmGageb++IxapzBW96xvmwU=",
-  "Source": "DataConversionAPI",
-  "BasePath": "_content/DataConversionAPI",
+  "Hash": "Xf9O0xAymvAXiyenc3idm3MAYQfIVm0BGJo3KTPP61I=",
+  "Source": "web-api-nelnet",
+  "BasePath": "_content/web-api-nelnet",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

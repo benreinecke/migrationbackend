@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DataConversionAPI.Models;
+namespace web_api_nelnet.Models;
 
 public partial class ParentMissingSalutation
 {
