@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class StudentDuplicateSchoolid
 {
-    public int RecId { get; set; }
-
     public string? SchoolId { get; set; }
 
     public string? FirstName { get; set; }
@@ -22,4 +20,6 @@ public partial class StudentDuplicateSchoolid
     public string? State { get; set; }
 
     public string? Zip { get; set; }
+
+    public int Id { get; set; }
 }

@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class StaffInvalidActiveStatus
 {
-    public int RecId { get; set; }
-
     public string? SchoolCode { get; set; }
 
     public string? LegacyPersonId { get; set; }
@@ -18,4 +16,6 @@ public partial class StaffInvalidActiveStatus
     public string? LastName { get; set; }
 
     public string? Active { get; set; }
+
+    public int Id { get; set; }
 }

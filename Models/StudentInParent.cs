@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class StudentInParent
 {
-    public int RecId { get; set; }
-
     public string? FamilyName { get; set; }
 
     public string? LegacyPersonId { get; set; }
@@ -14,4 +12,6 @@ public partial class StudentInParent
     public string? FirstName { get; set; }
 
     public string? LastName { get; set; }
+
+    public int Id { get; set; }
 }

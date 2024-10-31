@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class StaffInvalidM
 {
-    public int RecId { get; set; }
-
     public string? LegacyPersonId { get; set; }
 
     public string? FamilyName { get; set; }
@@ -16,4 +14,6 @@ public partial class StaffInvalidM
     public string? LastName { get; set; }
 
     public string? Ms { get; set; }
+
+    public int Id { get; set; }
 }

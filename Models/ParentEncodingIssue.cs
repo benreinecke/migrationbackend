@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class ParentEncodingIssue
 {
-    public int RecId { get; set; }
-
     public string? LegacyPersonId { get; set; }
 
     public string? FirstName { get; set; }
@@ -14,4 +12,6 @@ public partial class ParentEncodingIssue
     public string? MiddleName { get; set; }
 
     public string? LastName { get; set; }
+
+    public int Id { get; set; }
 }

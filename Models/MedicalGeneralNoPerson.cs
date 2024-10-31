@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class MedicalGeneralNoPerson
 {
-    public int RecId { get; set; }
-
     public string? StudentId { get; set; }
 
     public string? SchoolId { get; set; }
@@ -16,4 +14,6 @@ public partial class MedicalGeneralNoPerson
     public string? FirstName { get; set; }
 
     public string? LastName { get; set; }
+
+    public int Id { get; set; }
 }

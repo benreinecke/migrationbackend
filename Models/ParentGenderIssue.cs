@@ -24,4 +24,6 @@ public partial class ParentGenderIssue
     public string _ { get; set; } = null!;
 
     public string Issue { get; set; } = null!;
+
+    public int Id { get; set; }
 }

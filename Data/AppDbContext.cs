@@ -334,10 +334,11 @@ public partial class AppDbContext : DbContext
     {
         modelBuilder.Entity<ASummaryOfTablesExported>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("A_Summary_of_Tables_Exported", "val");
+            entity.HasKey(e => e.Id).HasName("PK__A_Summar__3213E83F22935396");
 
+            entity.ToTable("A_Summary_of_Tables_Exported", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.AddUpdatesToBoiler)
                 .HasMaxLength(2)
                 .IsUnicode(false)
@@ -512,10 +513,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<CheckChurchName>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("CheckChurchNames", "val");
+            entity.HasKey(e => e.Id).HasName("PK__CheckChu__3213E83F211840C0");
 
+            entity.ToTable("CheckChurchNames", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.NewValue)
                 .HasMaxLength(1)
                 .IsUnicode(false);
@@ -527,10 +529,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<CheckCombinedEmergencyContact>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("CheckCombinedEmergencyContact", "val");
+            entity.HasKey(e => e.Id).HasName("PK__CheckCom__3213E83FA50C9E3B");
 
+            entity.ToTable("CheckCombinedEmergencyContact", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address1).HasMaxLength(255);
             entity.Property(e => e.Address2).HasMaxLength(255);
             entity.Property(e => e.CellPhone).HasMaxLength(255);
@@ -541,19 +544,17 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.State).HasMaxLength(255);
             entity.Property(e => e.Zip).HasMaxLength(255);
         });
 
         modelBuilder.Entity<CheckDenomination>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("CheckDenominations", "val");
+            entity.HasKey(e => e.Id).HasName("PK__CheckDen__3213E83FC7C314BC");
 
+            entity.ToTable("CheckDenominations", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Denomination).HasMaxLength(255);
             entity.Property(e => e.InDefinedList)
                 .HasMaxLength(1)
@@ -569,10 +570,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<CheckEthnicity>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("CheckEthnicity", "val");
+            entity.HasKey(e => e.Id).HasName("PK__CheckEth__3213E83F0EDC44D9");
 
+            entity.ToTable("CheckEthnicity", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Ethnicity).HasMaxLength(255);
             entity.Property(e => e.InDefinedList)
                 .HasMaxLength(1)
@@ -588,10 +590,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<CheckRace>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("CheckRace", "val");
+            entity.HasKey(e => e.Id).HasName("PK__CheckRac__3213E83F33052E1D");
 
+            entity.ToTable("CheckRace", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.InDefinedList)
                 .HasMaxLength(1)
                 .IsUnicode(false)
@@ -874,16 +877,14 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<EcverifyRelationship>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ECVerifyRelationship", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ECVerify__3213E83F97FD8A2C");
 
+            entity.ToTable("ECVerifyRelationship", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
         });
 
@@ -945,10 +946,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<FamiliesNoCustodian>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("FamiliesNoCustodians", "val");
+            entity.HasKey(e => e.Id).HasName("PK__Families__3213E83FB23C1B08");
 
+            entity.ToTable("FamiliesNoCustodians", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Correspondence).HasMaxLength(255);
             entity.Property(e => e.Custody).HasMaxLength(255);
             entity.Property(e => e.EmergencyContact).HasMaxLength(255);
@@ -962,9 +964,6 @@ public partial class AppDbContext : DbContext
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.ParentsWeb).HasMaxLength(255);
             entity.Property(e => e.Pickup).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
             entity.Property(e => e.ReportCard).HasMaxLength(255);
         });
@@ -984,10 +983,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<GrandparentNotMarkedGrandParent>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("GrandparentNotMarkedGrandParent", "val");
+            entity.HasKey(e => e.Id).HasName("PK__Grandpar__3213E83FB7A750D7");
 
+            entity.ToTable("GrandparentNotMarkedGrandParent", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.Grandparent).HasMaxLength(255);
@@ -995,9 +995,6 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
         });
 
@@ -1023,10 +1020,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<IndividualNoRight>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("IndividualNoRights", "val");
+            entity.HasKey(e => e.Id).HasName("PK__Individu__3213E83F686358BB");
 
+            entity.ToTable("IndividualNoRights", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Correspondence).HasMaxLength(255);
             entity.Property(e => e.Custody).HasMaxLength(255);
             entity.Property(e => e.EmergencyContact).HasMaxLength(255);
@@ -1040,9 +1038,6 @@ public partial class AppDbContext : DbContext
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.ParentsWeb).HasMaxLength(255);
             entity.Property(e => e.Pickup).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
             entity.Property(e => e.ReportCard).HasMaxLength(255);
         });
@@ -1091,10 +1086,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<InvalidAddress>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("InvalidAddress", "val");
+            entity.HasKey(e => e.Id).HasName("PK__InvalidA__3213E83FA19C457B");
 
+            entity.ToTable("InvalidAddress", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address1).HasMaxLength(255);
             entity.Property(e => e.Address2).HasMaxLength(255);
             entity.Property(e => e.City).HasMaxLength(255);
@@ -1113,10 +1109,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<InvalidDate>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("InvalidDates", "val");
+            entity.HasKey(e => e.Id).HasName("PK__InvalidD__3213E83F62C726AE");
 
+            entity.ToTable("InvalidDates", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Date).HasMaxLength(255);
             entity.Property(e => e.Field)
                 .HasMaxLength(22)
@@ -1132,10 +1129,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<InvalidPhoneNumber>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("InvalidPhoneNumbers", "val");
+            entity.HasKey(e => e.Id).HasName("PK__InvalidP__3213E83F3A18DC8D");
 
+            entity.ToTable("InvalidPhoneNumbers", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Field)
                 .HasMaxLength(18)
                 .IsUnicode(false);
@@ -1151,13 +1149,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<InvalidSchoolCode>(entity =>
         {
-            entity.HasKey(e => e.RecId);
+            entity.HasKey(e => e.Id).HasName("PK__InvalidS__3213E83F7064954F");
 
             entity.ToTable("InvalidSchoolCode", "val");
 
-            entity.Property(e => e.RecId)
-                .ValueGeneratedNever()
-                .HasColumnName("RecID");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
@@ -1166,15 +1162,17 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.PersonType)
                 .HasMaxLength(10)
                 .IsUnicode(false);
+            entity.Property(e => e.RecId).HasColumnName("RecID");
             entity.Property(e => e.SchoolCode).HasMaxLength(255);
         });
 
         modelBuilder.Entity<InvalidSsn>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("InvalidSSN", "val");
+            entity.HasKey(e => e.Id).HasName("PK__InvalidS__3213E83F3909EEC8");
 
+            entity.ToTable("InvalidSSN", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
@@ -1209,14 +1207,12 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<LockerDuplicateNumber>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("LockerDuplicateNumber", "val");
+            entity.HasKey(e => e.Id).HasName("PK__LockerDu__3213E83F6140756C");
 
+            entity.ToTable("LockerDuplicateNumber", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Locker).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<MasterLessonPlanBp>(entity =>
@@ -1240,10 +1236,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<MedicalGeneralAllergyCommentNoAllergy>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("MedicalGeneralAllergyCommentNoAllergy", "val");
+            entity.HasKey(e => e.Id).HasName("PK__MedicalG__3213E83FDC58BF4A");
 
+            entity.ToTable("MedicalGeneralAllergyCommentNoAllergy", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Allergy).HasMaxLength(255);
             entity.Property(e => e.AllergyComment).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -1251,9 +1248,6 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<MedicalGeneralBp>(entity =>
@@ -1288,27 +1282,26 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<MedicalGeneralInvalidDate>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("MedicalGeneralInvalidDates", "val");
+            entity.HasKey(e => e.Id).HasName("PK__MedicalG__3213E83FC6AD664F");
 
+            entity.ToTable("MedicalGeneralInvalidDates", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.DatePrescribed).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<MedicalGeneralMissingInfo>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("MedicalGeneralMissingInfo", "val");
+            entity.HasKey(e => e.Id).HasName("PK__MedicalG__3213E83F15B58573");
 
+            entity.ToTable("MedicalGeneralMissingInfo", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Allergy).HasMaxLength(255);
             entity.Property(e => e.Condition).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -1317,41 +1310,34 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.Medication).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<MedicalGeneralNoLegacyPersonId>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("MedicalGeneralNoLegacyPersonID", "val");
+            entity.HasKey(e => e.Id).HasName("PK__MedicalG__3213E83F585EC189");
 
+            entity.ToTable("MedicalGeneralNoLegacyPersonID", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<MedicalGeneralNoPerson>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("MedicalGeneralNoPerson", "val");
+            entity.HasKey(e => e.Id).HasName("PK__MedicalG__3213E83F286A5CC6");
 
+            entity.ToTable("MedicalGeneralNoPerson", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -1397,10 +1383,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<MissingOrInvalidEmail>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("MissingOrInvalidEmails", "val");
+            entity.HasKey(e => e.Id).HasName("PK__MissingO__3213E83F79F9BFA9");
 
+            entity.ToTable("MissingOrInvalidEmails", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Email).HasMaxLength(255);
             entity.Property(e => e.Field)
                 .HasMaxLength(6)
@@ -1434,37 +1421,33 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<ParentBlankLegacyPersonId>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentBlankLegacyPersonID", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentBl__3213E83F45406950");
 
+            entity.ToTable("ParentBlankLegacyPersonID", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
         });
 
         modelBuilder.Entity<ParentBlankRelationship>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentBlankRelationships", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentBl__3213E83F20CE2345");
 
+            entity.ToTable("ParentBlankRelationships", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
         });
 
@@ -1569,10 +1552,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<ParentConfirmCustody>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentConfirmCustody", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentCo__3213E83FFB4F2AE9");
 
+            entity.ToTable("ParentConfirmCustody", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Custody).HasMaxLength(255);
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -1580,18 +1564,16 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
         });
 
         modelBuilder.Entity<ParentDuplicateLegacyId>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentDuplicateLegacyID", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentDu__3213E83F590FD8BB");
 
+            entity.ToTable("ParentDuplicateLegacyID", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address1).HasMaxLength(255);
             entity.Property(e => e.Address2).HasMaxLength(255);
             entity.Property(e => e.CellPhone).HasMaxLength(255);
@@ -1603,18 +1585,16 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
         });
 
         modelBuilder.Entity<ParentDuplicatedEmail>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentDuplicatedEmails", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentDu__3213E83F4E0A5F32");
 
+            entity.ToTable("ParentDuplicatedEmails", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Email).HasMaxLength(255);
             entity.Property(e => e.Email2).HasMaxLength(255);
             entity.Property(e => e.FamilyName).HasMaxLength(255);
@@ -1623,17 +1603,15 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<ParentEmail1andEmail2Match>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentEmail1andEmail2Match", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentEm__3213E83F5D5C2A63");
 
+            entity.ToTable("ParentEmail1andEmail2Match", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Email).HasMaxLength(255);
             entity.Property(e => e.Email2).HasMaxLength(255);
             entity.Property(e => e.FamilyName).HasMaxLength(255);
@@ -1643,34 +1621,30 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<ParentEncodingIssue>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentEncodingIssues", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentEn__3213E83FFE2673F3");
 
+            entity.ToTable("ParentEncodingIssues", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<ParentGenderIssue>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentGenderIssues", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentGe__3213E83FA7A07A7D");
 
+            entity.ToTable("ParentGenderIssues", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.Gender).HasMaxLength(255);
@@ -1690,10 +1664,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<ParentInmultipleFamily>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentInmultipleFamilies", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentIn__3213E83F85FD0F58");
 
+            entity.ToTable("ParentInmultipleFamilies", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address1).HasMaxLength(255);
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -1707,10 +1682,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<ParentMissingFirstorLastName>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentMissingFirstorLastName", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentMi__3213E83FE04A1678");
 
+            entity.ToTable("ParentMissingFirstorLastName", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FamilyOrder).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -1719,17 +1695,15 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<ParentMissingInvalidPermission>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentMissingInvalidPermissions", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentMi__3213E83FD709574E");
 
+            entity.ToTable("ParentMissingInvalidPermissions", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Correspondence).HasMaxLength(255);
             entity.Property(e => e.Custody).HasMaxLength(255);
             entity.Property(e => e.EmergencyContact).HasMaxLength(255);
@@ -1744,9 +1718,6 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.MiddleName).HasMaxLength(255);
             entity.Property(e => e.ParentsWeb).HasMaxLength(255);
             entity.Property(e => e.Pickup).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
             entity.Property(e => e.ReportCard).HasMaxLength(255);
             entity.Property(e => e.Salutation).HasMaxLength(255);
@@ -1754,10 +1725,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<ParentMissingPhoneNumber>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentMissingPhoneNumber", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentMi__3213E83F1C0EDBDF");
 
+            entity.ToTable("ParentMissingPhoneNumber", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CellPhone).HasMaxLength(255);
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -1765,18 +1737,16 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
         });
 
         modelBuilder.Entity<ParentMissingSalutation>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentMissingSalutations", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentMi__3213E83FA1AD9A77");
 
+            entity.ToTable("ParentMissingSalutations", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -1784,19 +1754,17 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Salutation).HasMaxLength(255);
             entity.Property(e => e.Suffix).HasMaxLength(255);
         });
 
         modelBuilder.Entity<ParentMultipleMotherFather>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentMultipleMotherFather", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentMu__3213E83F8BD8B84B");
 
+            entity.ToTable("ParentMultipleMotherFather", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -1810,27 +1778,26 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<ParentNoFamilyName>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentNoFamilyName", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentNo__3213E83F765C0F22");
 
+            entity.ToTable("ParentNoFamilyName", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<ParentNoFamilyOrder>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentNoFamilyOrder", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentNo__3213E83F85E80C30");
 
+            entity.ToTable("ParentNoFamilyOrder", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FamilyOrder).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -1838,34 +1805,30 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
         });
 
         modelBuilder.Entity<ParentNoLegacyPersonId>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentNoLegacyPersonID", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentNo__3213E83F6D2E8F77");
 
+            entity.ToTable("ParentNoLegacyPersonID", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<ParentNoStudent>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentNoStudents", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentNo__3213E83F8315D145");
 
+            entity.ToTable("ParentNoStudents", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -1873,17 +1836,15 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<ParentPotentialDupe>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentPotentialDupe", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentPo__3213E83F3F0EFCB1");
 
+            entity.ToTable("ParentPotentialDupe", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address1).HasMaxLength(255);
             entity.Property(e => e.CellPhone).HasMaxLength(255);
             entity.Property(e => e.City).HasMaxLength(255);
@@ -1894,9 +1855,6 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Relationship).HasMaxLength(255);
             entity.Property(e => e.State).HasMaxLength(255);
             entity.Property(e => e.WorkPhone).HasMaxLength(255);
@@ -1905,10 +1863,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<ParentStateAbbrvNotValid>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("ParentStateAbbrvNotValid", "val");
+            entity.HasKey(e => e.Id).HasName("PK__ParentSt__3213E83F88F667B5");
 
+            entity.ToTable("ParentStateAbbrvNotValid", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address1).HasMaxLength(255);
             entity.Property(e => e.Address2).HasMaxLength(255);
             entity.Property(e => e.City).HasMaxLength(255);
@@ -1919,9 +1878,6 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.State).HasMaxLength(255);
             entity.Property(e => e.Zip).HasMaxLength(255);
         });
@@ -3127,10 +3083,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StaffDenominationNotDefined>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffDenominationNotDefined", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffDen__3213E83F35E687AF");
 
+            entity.ToTable("StaffDenominationNotDefined", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Denomination).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -3144,10 +3101,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StaffDuplicateId>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffDuplicateIds", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffDup__3213E83F1D7D4179");
 
+            entity.ToTable("StaffDuplicateIds", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address).HasMaxLength(255);
             entity.Property(e => e.CellPhone).HasMaxLength(255);
             entity.Property(e => e.Email).HasMaxLength(255);
@@ -3157,17 +3115,15 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffEmailandEmail2Match>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffEmailandEmail2Match", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffEma__3213E83F92CAD8FC");
 
+            entity.ToTable("StaffEmailandEmail2Match", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Email).HasMaxLength(255);
             entity.Property(e => e.Email2).HasMaxLength(255);
             entity.Property(e => e.FamilyName).HasMaxLength(255);
@@ -3181,27 +3137,26 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StaffEncodingIssue>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffEncodingIssues", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffEnc__3213E83FA781F048");
 
+            entity.ToTable("StaffEncodingIssues", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffGenderNotInStandard>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffGenderNotInStandard", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffGen__3213E83FB10F10FA");
 
+            entity.ToTable("StaffGenderNotInStandard", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.Gender).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -3209,18 +3164,16 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolCode).HasMaxLength(255);
         });
 
         modelBuilder.Entity<StaffInvalidActiveStatus>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidActiveStatus", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83F772DFDE2");
 
+            entity.ToTable("StaffInvalidActiveStatus", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Active).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -3228,18 +3181,16 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolCode).HasMaxLength(255);
         });
 
         modelBuilder.Entity<StaffInvalidDate>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidDates", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83F33493F38");
 
+            entity.ToTable("StaffInvalidDates", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.BirthDate).HasMaxLength(255);
             entity.Property(e => e.EndDate).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -3252,10 +3203,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StaffInvalidElem>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidElem", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83FBC23C295");
 
+            entity.ToTable("StaffInvalidElem", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Elem)
                 .HasMaxLength(255)
                 .HasColumnName("ELEM");
@@ -3265,51 +3217,45 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffInvalidExperienceSchool>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidExperienceSchool", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83F97AB910F");
 
+            entity.ToTable("StaffInvalidExperienceSchool", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.ExperienceSchool).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffInvalidExperienceTotal>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidExperienceTotal", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83F7401D683");
 
+            entity.ToTable("StaffInvalidExperienceTotal", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Experiencetotal).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffInvalidFaculty>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidFaculty", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83F09FC9939");
 
+            entity.ToTable("StaffInvalidFaculty", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Faculty).HasMaxLength(255);
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -3317,17 +3263,15 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffInvalidFullTime>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidFullTime", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83F0C9490FC");
 
+            entity.ToTable("StaffInvalidFullTime", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.FullTime).HasMaxLength(255);
@@ -3335,17 +3279,15 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffInvalidH>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidHS", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83FFFA08F85");
 
+            entity.ToTable("StaffInvalidHS", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.Hs)
@@ -3355,17 +3297,15 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffInvalidM>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidMS", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83F4DD6AEA2");
 
+            entity.ToTable("StaffInvalidMS", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -3375,17 +3315,15 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.Ms)
                 .HasMaxLength(255)
                 .HasColumnName("MS");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffInvalidP>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidPS", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83F0A34584F");
 
+            entity.ToTable("StaffInvalidPS", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -3395,35 +3333,31 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.Ps)
                 .HasMaxLength(255)
                 .HasColumnName("PS");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffInvalidStaff>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffInvalidStaff", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffInv__3213E83F244E0B14");
 
+            entity.ToTable("StaffInvalidStaff", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Staff).HasMaxLength(255);
         });
 
         modelBuilder.Entity<StaffMissingFirstorLastName>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffMissingFirstorLastName", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffMis__3213E83FF1E49826");
 
+            entity.ToTable("StaffMissingFirstorLastName", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -3431,17 +3365,15 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffMissingOccupation>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffMissingOccupation", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffMis__3213E83F573FAB32");
 
+            entity.ToTable("StaffMissingOccupation", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
@@ -3449,17 +3381,15 @@ public partial class AppDbContext : DbContext
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
             entity.Property(e => e.Occupation).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffNoFacultyStaffFlag>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffNoFacultyStaffFlag", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffNoF__3213E83F2746B5D6");
 
+            entity.ToTable("StaffNoFacultyStaffFlag", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Faculty).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -3467,52 +3397,46 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolCode).HasMaxLength(255);
             entity.Property(e => e.Staff).HasMaxLength(255);
         });
 
         modelBuilder.Entity<StaffNoFamilyName>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffNoFamilyName", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffNoF__3213E83F710591B2");
 
+            entity.ToTable("StaffNoFamilyName", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffNoFirstName>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffNoFirstName", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffNoF__3213E83F8D73C8A6");
 
+            entity.ToTable("StaffNoFirstName", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffNoGradeLevelsAssigned>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffNoGradeLevelsAssigned", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffNoG__3213E83F977F6309");
 
+            entity.ToTable("StaffNoGradeLevelsAssigned", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Elem)
                 .HasMaxLength(255)
                 .HasColumnName("ELEM");
@@ -3531,67 +3455,59 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.Ps)
                 .HasMaxLength(255)
                 .HasColumnName("PS");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolCode).HasMaxLength(255);
         });
 
         modelBuilder.Entity<StaffNoLastName>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffNoLastName", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffNoL__3213E83F8426C536");
 
+            entity.ToTable("StaffNoLastName", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffNoLegacyPersonId>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffNoLegacyPersonID", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffNoL__3213E83FBAAFFFE8");
 
+            entity.ToTable("StaffNoLegacyPersonID", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffOccupationNotInDefaultList>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffOccupationNotInDefaultList", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffOcc__3213E83F919EA2DC");
 
+            entity.ToTable("StaffOccupationNotInDefaultList", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.Occupation).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StaffPotentialParent>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffPotentialParent", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffPot__3213E83FBC62AC83");
 
+            entity.ToTable("StaffPotentialParent", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
@@ -3607,10 +3523,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StaffRaceNotInStandard>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffRaceNotInStandard", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffRac__3213E83F54A858DC");
 
+            entity.ToTable("StaffRaceNotInStandard", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.Race).HasMaxLength(255);
@@ -3621,10 +3538,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StaffStateAbbrvNotValid>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StaffStateAbbrvNotValid", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StaffSta__3213E83FEE8DB75C");
 
+            entity.ToTable("StaffStateAbbrvNotValid", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address).HasMaxLength(255);
             entity.Property(e => e.City).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -3633,9 +3551,6 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.State).HasMaxLength(255);
             entity.Property(e => e.Zip).HasMaxLength(255);
         });
@@ -3710,29 +3625,28 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StandAloneAlert>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StandAloneAlert", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StandAlo__3213E83F71949001");
 
+            entity.ToTable("StandAloneAlert", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.PersonType).HasMaxLength(10);
             entity.Property(e => e.Total).HasMaxLength(7);
         });
 
         modelBuilder.Entity<StateIdlegacyPersonIdnotFound>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StateIDLegacyPersonIDNotFound", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StateIDL__3213E83FE39948D3");
 
+            entity.ToTable("StateIDLegacyPersonIDNotFound", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.IdentifierTypeId)
                 .HasMaxLength(255)
                 .HasColumnName("IdentifierTypeID");
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.StateIdentifier).HasMaxLength(255);
         });
 
@@ -3754,10 +3668,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentAdrNotMatchCustodian>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentAdrNotMatchCustodian", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentA__3213E83F0D966283");
 
+            entity.ToTable("StudentAdrNotMatchCustodian", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address1).HasMaxLength(255);
             entity.Property(e => e.Address2).HasMaxLength(255);
             entity.Property(e => e.City).HasMaxLength(255);
@@ -3767,9 +3682,6 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.State).HasMaxLength(255);
             entity.Property(e => e.Zip).HasMaxLength(255);
         });
@@ -3890,17 +3802,15 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentCellPhoneinParentDatum>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentCellPhoneinParentData", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentC__3213E83F7EF1EEF3");
 
+            entity.ToTable("StudentCellPhoneinParentData", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CellPhone).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -3908,10 +3818,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentDuplicateLegacyId>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentDuplicateLegacyID", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentD__3213E83FB84AC6D2");
 
+            entity.ToTable("StudentDuplicateLegacyID", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address1).HasMaxLength(255);
             entity.Property(e => e.CellPhone).HasMaxLength(255);
             entity.Property(e => e.City).HasMaxLength(255);
@@ -3922,27 +3833,22 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.State).HasMaxLength(255);
             entity.Property(e => e.Zip).HasMaxLength(255);
         });
 
         modelBuilder.Entity<StudentDuplicateSchoolid>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentDuplicateSchoolid", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentD__3213E83FDCAF3E95");
 
+            entity.ToTable("StudentDuplicateSchoolid", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address1).HasMaxLength(255);
             entity.Property(e => e.City).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -3952,19 +3858,17 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentEmail1andEmail2Match>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentEmail1andEmail2Match", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentE__3213E83F33514EE8");
 
+            entity.ToTable("StudentEmail1andEmail2Match", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Email).HasMaxLength(255);
             entity.Property(e => e.Email2).HasMaxLength(255);
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -3972,18 +3876,16 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentEmailinParentDatum>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentEmailinParentData", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentE__3213E83FDED51907");
 
+            entity.ToTable("StudentEmailinParentData", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Email).HasMaxLength(255);
             entity.Property(e => e.Email2).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -3991,16 +3893,14 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentEthnicityNotStandard>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentEthnicityNotStandard", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentE__3213E83FD518D99A");
 
+            entity.ToTable("StudentEthnicityNotStandard", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Ethnicity).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -4008,17 +3908,15 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentGenderNotInStandard>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentGenderNotInStandard", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentG__3213E83F8E2634BF");
 
+            entity.ToTable("StudentGenderNotInStandard", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.Gender).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -4026,10 +3924,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentIllogicalSacramentDate>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentIllogicalSacramentDates", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentI__3213E83FAC2CCCEA");
 
+            entity.ToTable("StudentIllogicalSacramentDates", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.BirthDate).HasMaxLength(255);
             entity.Property(e => e.Date).HasMaxLength(255);
             entity.Property(e => e.DateType)
@@ -4045,33 +3944,29 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentInParent>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentInParents", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentI__3213E83FB0DEDDDC");
 
+            entity.ToTable("StudentInParents", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StudentInvalidGradeLevel>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentInvalidGradeLevel", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentI__3213E83F2A68DB9B");
 
+            entity.ToTable("StudentInvalidGradeLevel", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.GradeLevel).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -4079,16 +3974,14 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentInvalidStatus>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentInvalidStatus", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentI__3213E83F216DE6AD");
 
+            entity.ToTable("StudentInvalidStatus", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -4099,10 +3992,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentMissingBirthdate>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentMissingBirthdate", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentM__3213E83F8EC7A799");
 
+            entity.ToTable("StudentMissingBirthdate", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.BirthDate).HasMaxLength(255);
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
@@ -4111,23 +4005,18 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StudentMissingEnrollDate>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentMissingEnrollDates", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentM__3213E83F4CD49ABC");
 
+            entity.ToTable("StudentMissingEnrollDates", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.EnrollDate).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -4135,17 +4024,15 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentMissingFirstorLastName>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentMissingFirstorLastName", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentM__3213E83F7CE4CCD2");
 
+            entity.ToTable("StudentMissingFirstorLastName", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -4153,10 +4040,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentMissingGender>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentMissingGender", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentM__3213E83F860CFC94");
 
+            entity.ToTable("StudentMissingGender", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.Gender).HasMaxLength(255);
@@ -4165,23 +4053,18 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StudentNoFamily>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentNoFamily", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentN__3213E83F6DBE60FC");
 
+            entity.ToTable("StudentNoFamily", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FamilyName).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -4189,53 +4072,47 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<StudentNoGradeLevel>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentNoGradeLevel", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentN__3213E83F3245CA52");
 
+            entity.ToTable("StudentNoGradeLevel", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.GradeLevel).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<StudentReducedLunchNotFormatted>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentReducedLunchNotFormatted", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentR__3213E83FD9447F4F");
 
+            entity.ToTable("StudentReducedLunchNotFormatted", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.LegacyPersonId)
                 .HasMaxLength(255)
                 .HasColumnName("LegacyPersonID");
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.Reducedlunch).HasMaxLength(255);
         });
 
         modelBuilder.Entity<StudentStateAbbrvNotValid>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("StudentStateAbbrvNotValid", "val");
+            entity.HasKey(e => e.Id).HasName("PK__StudentS__3213E83F6EC197F3");
 
+            entity.ToTable("StudentStateAbbrvNotValid", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Address1).HasMaxLength(255);
             entity.Property(e => e.Address2).HasMaxLength(255);
             entity.Property(e => e.City).HasMaxLength(255);
             entity.Property(e => e.FirstName).HasMaxLength(255);
             entity.Property(e => e.LastName).HasMaxLength(255);
             entity.Property(e => e.MiddleName).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
             entity.Property(e => e.SchoolId)
                 .HasMaxLength(255)
                 .HasColumnName("SchoolID");
@@ -4399,16 +4276,14 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<UddataNotDefined>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("UDDataNotDefined", "val");
+            entity.HasKey(e => e.Id).HasName("PK__UDDataNo__3213E83F11E4720B");
 
+            entity.ToTable("UDDataNotDefined", "val");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.FieldName).HasMaxLength(255);
             entity.Property(e => e.GroupName).HasMaxLength(255);
             entity.Property(e => e.GroupType).HasMaxLength(255);
-            entity.Property(e => e.RecId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("RecID");
         });
 
         modelBuilder.Entity<ValidationConfiguration>(entity =>

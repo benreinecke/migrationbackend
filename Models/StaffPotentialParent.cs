@@ -16,4 +16,6 @@ public partial class StaffPotentialParent
     public string? LastName { get; set; }
 
     public string YesNo { get; set; } = null!;
+
+    public int Id { get; set; }
 }

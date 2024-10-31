@@ -24,4 +24,6 @@ public partial class InvalidAddress
     public string? State { get; set; }
 
     public string? Zip { get; set; }
+
+    public int Id { get; set; }
 }

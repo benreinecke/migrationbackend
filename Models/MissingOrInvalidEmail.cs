@@ -18,4 +18,6 @@ public partial class MissingOrInvalidEmail
     public string Field { get; set; } = null!;
 
     public string? Email { get; set; }
+
+    public int Id { get; set; }
 }

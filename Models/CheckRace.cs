@@ -12,4 +12,6 @@ public partial class CheckRace
     public string InDefinedList { get; set; } = null!;
 
     public string NewValue { get; set; } = null!;
+
+    public int Id { get; set; }
 }

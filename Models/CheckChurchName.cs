@@ -10,4 +10,6 @@ public partial class CheckChurchName
     public string? Value { get; set; }
 
     public string NewValue { get; set; } = null!;
+
+    public int Id { get; set; }
 }

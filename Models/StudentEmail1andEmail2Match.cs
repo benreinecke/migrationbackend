@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class StudentEmail1andEmail2Match
 {
-    public int RecId { get; set; }
-
     public string? FamilyName { get; set; }
 
     public string? SchoolId { get; set; }
@@ -20,4 +18,6 @@ public partial class StudentEmail1andEmail2Match
     public string? Email { get; set; }
 
     public string? Email2 { get; set; }
+
+    public int Id { get; set; }
 }

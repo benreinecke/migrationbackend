@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class IndividualNoRight
 {
-    public int RecId { get; set; }
-
     public string? FamilyName { get; set; }
 
     public string? LegacyPersonId { get; set; }
@@ -32,4 +30,6 @@ public partial class IndividualNoRight
     public string? Pickup { get; set; }
 
     public string? Grandparent { get; set; }
+
+    public int Id { get; set; }
 }

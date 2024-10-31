@@ -14,4 +14,6 @@ public partial class InvalidDate
     public string Field { get; set; } = null!;
 
     public string? Date { get; set; }
+
+    public int Id { get; set; }
 }

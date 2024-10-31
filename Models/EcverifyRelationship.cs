@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class EcverifyRelationship
 {
-    public int RecId { get; set; }
-
     public string? FamilyName { get; set; }
 
     public string? FirstName { get; set; }
@@ -14,4 +12,6 @@ public partial class EcverifyRelationship
     public string? LastName { get; set; }
 
     public string? Relationship { get; set; }
+
+    public int Id { get; set; }
 }

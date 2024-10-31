@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class ParentMissingInvalidPermission
 {
-    public int RecId { get; set; }
-
     public string? FamilyName { get; set; }
 
     public string? LegacyPersonId { get; set; }
@@ -36,4 +34,6 @@ public partial class ParentMissingInvalidPermission
     public string? Pickup { get; set; }
 
     public string? ParentsWeb { get; set; }
+
+    public int Id { get; set; }
 }

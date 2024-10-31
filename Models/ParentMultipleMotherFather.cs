@@ -18,4 +18,6 @@ public partial class ParentMultipleMotherFather
     public string? MiddleName { get; set; }
 
     public string? LastName { get; set; }
+
+    public int Id { get; set; }
 }

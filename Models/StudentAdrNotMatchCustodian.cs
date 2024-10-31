@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class StudentAdrNotMatchCustodian
 {
-    public int RecId { get; set; }
-
     public string? FamilyName { get; set; }
 
     public string? LegacyPersonId { get; set; }
@@ -24,4 +22,6 @@ public partial class StudentAdrNotMatchCustodian
     public string? State { get; set; }
 
     public string? Zip { get; set; }
+
+    public int Id { get; set; }
 }

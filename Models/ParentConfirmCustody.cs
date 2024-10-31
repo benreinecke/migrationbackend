@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class ParentConfirmCustody
 {
-    public int RecId { get; set; }
-
     public string? FamilyName { get; set; }
 
     public string? LegacyPersonId { get; set; }
@@ -18,4 +16,6 @@ public partial class ParentConfirmCustody
     public string? Relationship { get; set; }
 
     public string? Custody { get; set; }
+
+    public int Id { get; set; }
 }

@@ -16,4 +16,6 @@ public partial class StaffInvalidDate
     public string? StartDate { get; set; }
 
     public string? EndDate { get; set; }
+
+    public int Id { get; set; }
 }

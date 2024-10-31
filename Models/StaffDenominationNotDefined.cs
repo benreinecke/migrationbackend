@@ -14,4 +14,6 @@ public partial class StaffDenominationNotDefined
     public string? LastName { get; set; }
 
     public string? Denomination { get; set; }
+
+    public int Id { get; set; }
 }

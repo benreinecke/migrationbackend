@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class ParentStateAbbrvNotValid
 {
-    public int RecId { get; set; }
-
     public string? FamilyName { get; set; }
 
     public string? LegacyPersonId { get; set; }
@@ -26,4 +24,6 @@ public partial class ParentStateAbbrvNotValid
     public string? State { get; set; }
 
     public string? Zip { get; set; }
+
+    public int Id { get; set; }
 }

@@ -12,4 +12,6 @@ public partial class StaffRaceNotInStandard
     public string? LastName { get; set; }
 
     public string? Race { get; set; }
+
+    public int Id { get; set; }
 }

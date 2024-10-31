@@ -18,4 +18,6 @@ public partial class ParentInmultipleFamily
     public string? Address1 { get; set; }
 
     public string? FamilyName { get; set; }
+
+    public int Id { get; set; }
 }

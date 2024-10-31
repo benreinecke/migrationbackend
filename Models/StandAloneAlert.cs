@@ -8,4 +8,6 @@ public partial class StandAloneAlert
     public string? PersonType { get; set; }
 
     public string? Total { get; set; }
+
+    public int Id { get; set; }
 }

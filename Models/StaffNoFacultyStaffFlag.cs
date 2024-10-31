@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class StaffNoFacultyStaffFlag
 {
-    public int RecId { get; set; }
-
     public string? SchoolCode { get; set; }
 
     public string? LegacyPersonId { get; set; }
@@ -20,4 +18,6 @@ public partial class StaffNoFacultyStaffFlag
     public string? Faculty { get; set; }
 
     public string? Staff { get; set; }
+
+    public int Id { get; set; }
 }

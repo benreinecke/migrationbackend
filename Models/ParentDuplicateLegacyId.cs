@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class ParentDuplicateLegacyId
 {
-    public int RecId { get; set; }
-
     public string? FamilyName { get; set; }
 
     public string? LegacyPersonId { get; set; }
@@ -26,4 +24,6 @@ public partial class ParentDuplicateLegacyId
     public string? CellPhone { get; set; }
 
     public string? Email { get; set; }
+
+    public int Id { get; set; }
 }

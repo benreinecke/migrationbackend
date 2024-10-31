@@ -18,4 +18,6 @@ public partial class StaffEmailandEmail2Match
     public string? Email { get; set; }
 
     public string? Email2 { get; set; }
+
+    public int Id { get; set; }
 }

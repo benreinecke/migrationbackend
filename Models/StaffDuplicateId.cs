@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class StaffDuplicateId
 {
-    public int RecId { get; set; }
-
     public string? LegacyPersonId { get; set; }
 
     public string? FirstName { get; set; }
@@ -20,4 +18,6 @@ public partial class StaffDuplicateId
     public string? CellPhone { get; set; }
 
     public string? Email { get; set; }
+
+    public int Id { get; set; }
 }

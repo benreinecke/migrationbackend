@@ -14,4 +14,6 @@ public partial class ASummaryOfTablesExported
     public string AddUpdatesToBoiler { get; set; } = null!;
 
     public string? Required { get; set; }
+
+    public int Id { get; set; }
 }

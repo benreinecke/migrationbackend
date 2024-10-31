@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class StaffNoGradeLevelsAssigned
 {
-    public int RecId { get; set; }
-
     public string? SchoolCode { get; set; }
 
     public string? LegacyPersonId { get; set; }
@@ -24,4 +22,6 @@ public partial class StaffNoGradeLevelsAssigned
     public string? Ms { get; set; }
 
     public string? Hs { get; set; }
+
+    public int Id { get; set; }
 }

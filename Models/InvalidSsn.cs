@@ -16,4 +16,6 @@ public partial class InvalidSsn
     public string? LastName { get; set; }
 
     public string? Ssn { get; set; }
+
+    public int Id { get; set; }
 }

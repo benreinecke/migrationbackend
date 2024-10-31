@@ -18,4 +18,6 @@ public partial class StudentIllogicalSacramentDate
     public string? Date { get; set; }
 
     public string DateType { get; set; } = null!;
+
+    public int Id { get; set; }
 }

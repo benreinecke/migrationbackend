@@ -5,8 +5,6 @@ namespace web_api_nelnet.Models;
 
 public partial class ParentNoFamilyOrder
 {
-    public int RecId { get; set; }
-
     public string? LegacyPersonId { get; set; }
 
     public string? FamilyName { get; set; }
@@ -18,4 +16,6 @@ public partial class ParentNoFamilyOrder
     public string? Relationship { get; set; }
 
     public string? FamilyOrder { get; set; }
+
+    public int Id { get; set; }
 }
