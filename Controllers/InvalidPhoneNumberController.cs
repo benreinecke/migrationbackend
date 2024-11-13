@@ -19,7 +19,7 @@ namespace web_api_nelnet.Controllers
 
         public InvalidPhoneNumberController(AppDbContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         // GET: api/InvalidPhoneNumber

@@ -5,11 +5,11 @@ namespace web_api_nelnet.Models;
 
 public partial class ParentMissingSalutation
 {
+    public string? Salutation { get; set; }
+
     public string? FamilyName { get; set; }
 
     public string? LegacyPersonId { get; set; }
-
-    public string? Salutation { get; set; }
 
     public string? FirstName { get; set; }
 
