@@ -5,6 +5,8 @@ namespace web_api_nelnet.Models;
 
 public partial class MissingOrInvalidEmail
 {
+    public string? Email { get; set; }
+
     public string PersonType { get; set; } = null!;
 
     public int RecId { get; set; }
@@ -16,8 +18,6 @@ public partial class MissingOrInvalidEmail
     public string? LastName { get; set; }
 
     public string Field { get; set; } = null!;
-
-    public string? Email { get; set; }
 
     public int Id { get; set; }
 }
