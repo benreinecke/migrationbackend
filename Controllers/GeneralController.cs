@@ -23,8 +23,8 @@ namespace web_api_nelnet.Controllers
     }
 
 
-    private readonly string[] routes = { "/table/dataSet1", "/table/dataSet2", "/table/dataSet4", "/table/dataSet5" };
-    private readonly Random random = new Random();
+    // private readonly string[] routes = { "/table/dataSet1", "/table/dataSet2", "/table/dataSet4", "/table/dataSet5" };
+    // private readonly Random random = new Random();
 
 
     [HttpGet("GetTableNames")]
@@ -34,13 +34,13 @@ namespace web_api_nelnet.Controllers
           .Select(t => t.GetTableName())
           .Distinct()
           .Where(name =>
-              (name.StartsWith("Student") || name.StartsWith("Staff") || name.StartsWith("Parent"))
+              (name.StartsWith("Student") || name.StartsWith("Staff") || name.StartsWith("Missing")|| name.StartsWith("Invalid")|| name.StartsWith("Parent"))
               && !name.Contains("BP"))
           .Select(name => new
           {
             label = ConvertToSentence(name),
-            route = routes[random.Next(routes.Length)]
-          })
+            route = $"/table/{name}"       
+   })
           .ToList();
 
       return Ok(tableNames);
